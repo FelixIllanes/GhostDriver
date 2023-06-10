@@ -1,0 +1,59 @@
+.header {
+    background-blend-mode: multiply;
+    background-color: #181D31;
+    height: 50px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-top: 15px;
+    z-index: 110;
+}
+.menu-nav {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+.item-nav-menu {
+    font-size: 18px;
+    margin: 0px 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+    text-decoration: none;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo {
+    position: absolute;
+    top: 24%;
+    left: 10%;
+    color: white;
+    font-size: 22px;
+    font-style: italic;
+    margin-right: 20px;
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+.nav-menu-link {
+    padding: 10px;
+    width: 100px;
+    margin: 15px;
+    color: #f5f0f0;
+    background-color: #181D31;
+    transition: transform 0.3s ease-in-out;
+}
+.nav-menu-link:hover {
+    background-color: #FFB100;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    transform: scale(1.2);
+    transition: all 0.4s ease 0s;
+}
+  

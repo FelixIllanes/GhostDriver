@@ -1,0 +1,105 @@
+.modal_background{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(200, 200, 200, 0.685);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    padding-top: 12%;
+    z-index: 100;
+}
+.modal_container{
+    width: 500px;
+    height: 220px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: white;
+}
+
+.modal_container .modal_body{
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.close_boton{
+    display: flex;
+    justify-content: flex-end;
+}
+.close_boton button{
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.modal_container .modal_footer{
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_button {
+    border: 1.5px solid black;
+    padding: 10px;
+    margin: 15px;
+    color: #f5f0f0;
+    background-color: var(--bluedark);
+    box-shadow: 3px 3px 6px #101014;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+}
+  
+.modal_button:hover {
+    background-color: var(--yellow);
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    transform: scale(1.2);
+}
+
+.delete_btn:hover{
+    background-color: crimson;
+}
+.update_btn:hover{
+    background-color: rgb(8, 139, 19) ;
+}
+
+.modal_container_update{
+    width: 590px;
+    height: 460px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: white; 
+}
+.modal_background_update{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(200, 200, 200, 0.685);
+    backdrop-filter: blur(1.5px);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    padding-top: 4%;
+    z-index: 100;
+}
+
+.modal_footer_update{
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update_user_modal{
+    font-size: 15px;
+}
+.update_user_modal input{
+    width: 15rem;
+}

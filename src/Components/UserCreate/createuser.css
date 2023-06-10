@@ -1,0 +1,44 @@
+.create_user_container{
+    width: 48%;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 50px 50px 20px 50px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.858);
+}
+.create_user_form h1{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form_imputs{
+    margin-right: 20px;
+}
+.form_imputs input{
+    margin-top: 10px;
+}
+
+.person_data_name{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+.acount_data_form{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+.directions_data_form{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.ci{
+    width: 10rem;
+}
+.password, .email{
+    width: 27.8rem;
+}

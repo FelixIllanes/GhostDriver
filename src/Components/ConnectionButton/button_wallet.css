@@ -1,0 +1,14 @@
+.label_wallet{
+    color: white;
+}
+
+.button_wallet_container{
+    display: flex;
+}
+
+.button_wallet_container .button_two{
+    height: 25px;
+    width: 132px;
+    font-size: 14px;
+    margin-right: 10px;
+}

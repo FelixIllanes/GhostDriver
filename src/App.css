@@ -1,38 +1,157 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --bluedark: #181D31;
+  --yellow: #FFB100;
+}
+main{
+  min-height: 93.1vh;
+  padding-top: 25px;
+  width: 100%;
+  background-color: var(--yellow);
+}
+
+table {
+  border: 1px solid var(--bluedark);
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  box-shadow: 5px 5px 5px 4px rgba(0, 0, 0, 0.4);
+
+}
+td, th {
+  text-align: center;
+  vertical-align: center;
+  border-bottom: 1px solid var(--bluedark);
+  padding: 0.8em;
+}
+td{
+  background-color: rgba(255, 255, 255, 0.881);
+}
+thead{
+  background-color: var(--bluedark);
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+table tr:hover{
+  background-color: var(--pink);
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+  color: var(--blue);
+}
+.tire td{
+  border-bottom: 0px;
+  background-color: transparent;
+}
+.tire{
+  padding: 0;
+  font-size: 15px;
+}
+
+
+.btn_delete {
+  background-color: transparent;
+  position: relative;
+  border: none;
+}
+
+
+.buttons_crud .btn_delete{
+  margin: 0 35px;
+}
+.invoice_list{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.map_container{
+  height: 85vh;
+  width: 90%;
+  margin: 0 30px;
+  border: 2px solid black;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+}
+.panel_uno{
+  height: 150px;
+  width: 430px;
+  background-color: var(--bluedark);
+  padding: 30px 35px;
+  border-radius: 15px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  margin-top: 5px;
+  font-size: 20px;
+}
+.panel_uno label{
+  color: var(--yellow);
+}
+.mapa_data_panel{
+  height: 85vh;
+  width: 430px;
+  background-color: var(--bluedark);
+  padding: 30px 35px;
+  border-radius: 15px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+  margin-top: 5px;
+  font-size: 20px;
+}
+.mapa_data_panel div{
+  margin-top: 12px;
+}
+.map_layout{
+  display: grid;
+  grid-template-columns: 68% 32%;
+}
+
+.mapa_data_panel p{
+  margin-top: 5px;
+}
+.mapa_data_panel label{
+  color: var(--yellow);
+}
+.mapa_data_panel h2{
+  margin-bottom: 10px;
+}
+.mapa_data_panel button{
+  margin-left: 33%;
+  width: 130px;
+  margin-top: 20px;
+}
+
+.form_map_data{
+    padding: 10px;
+}
+.form_map_data select{
+  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-left: 33%;
+  width: 130px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 17px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form_map_data div{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btns_forms button{
+  margin: 0;
+  margin-left: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.create_user_background{
+  height: 100vh;
 }
