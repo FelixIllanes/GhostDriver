@@ -27,10 +27,10 @@ export default function MapPage() {
     }, []);
 
     if(loaded){
-        return <div>Loading.....</div>
+        return <main><div className="loader"></div></main>
     }
     
-    if (!isLoaded) return <div>Loading....</div>;
+    if (!isLoaded) return <main><div className="loader"></div></main>;
     return(
         <main>
             <Map userPos={userPos}/>
