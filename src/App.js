@@ -17,7 +17,7 @@ function App() {
     <AuthProvider>
       <div className='App'>
         <Routes>
-            <Route path="/Login" element={<Login/>}/>
+            <Route path="/" element={<Login/>}/>
             <Route path="/CreateUser" element={<CreateUser/>}/>
 
             {/* Rutas para usuario */}
@@ -28,8 +28,8 @@ function App() {
             </Route>
 
             {/* Rutas para admin */}
-            <Route path="/" element={<Home/>}>
-              <Route path="UserCrud" element={<UserCrud/>}/>
+            <Route path="/Admin-home" element={<Home/>}>
+             <Route index element={<UserCrud/>}/>
               <Route path="VhclCrud" element={<VehicleCrud/>}/>
               <Route path="Invoice" element={<InvoiceList/>}/>
 {/*               <Route path="CreateUser" element={<CreateUser/>}/> */}

@@ -20,7 +20,7 @@ function Header(){
             <ConnectionButton/>
             <ul className="menu-nav">
                 <li className="iten-nav-menu">
-                    <Link to= "UserCrud"className='nav-menu-link'>Usuarios</Link>
+                    <Link to= "/Admin-home"className='nav-menu-link'>Usuarios</Link>
                 </li>
                 <li className="iten-nav-menu">
                     <Link to="Invoice" className='nav-menu-link'>Facturas</Link>

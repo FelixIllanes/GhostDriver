@@ -44,7 +44,7 @@ export const AuthProvider = ({children}) => {
             setVehiclePosition()
 
             if(res.user.is_superuser){
-                navigate('/')
+                navigate('/Admin-home')
             }else{
                 navigate('/User-Home')
 
@@ -64,7 +64,7 @@ export const AuthProvider = ({children}) => {
         window.localStorage.removeItem('userId');
         setUser(null);
         setIsAutenticated(false);
-        navigate('/Login')
+        navigate('/')
     };
 
     const vars = {

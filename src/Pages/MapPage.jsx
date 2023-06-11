@@ -4,32 +4,57 @@ import { getAll } from "../services/vehicle";
 import { getPrice, startTravel } from "../services/general";
 import { sendEther } from "../services/Contract";
 import { reverseGeocode } from "../services/geocode";
+import { get } from "../services/user";
 
 
 export default function MapPage() {
 
+    const[userPos, setUserPos] = useState([])
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     }); 
+
+    const[loaded, setLoaded] = useState(true)
+
+    useEffect(() => {
+        const espera = async () => {
+            const userId = window.localStorage.getItem('userId');
+            get(userId).then(setUserPos);
+            await new Promise(resolve => setTimeout(resolve,2000));
+            setLoaded(false)
+        }
+        espera()
+    }, []);
+
+    if(loaded){
+        return <div>Loading.....</div>
+    }
     
     if (!isLoaded) return <div>Loading....</div>;
     return(
         <main>
-            <Map />
+            <Map userPos={userPos}/>
         </main>
     );
 
 }
-function Map() {
-    const center = useMemo(() => ({ lat: -17.386555, lng: -66.266377}), []);
+function Map({userPos}) {
+
+    const{ci, name, lastname, city, email, latitud, longitud} = userPos
+
     
+    const center = useMemo(() => ({ lat: Number(latitud), lng: Number(longitud)}), []);
+    
+
     const[initPos, setInitPos] = useState([])
 
     const [ vehicles, setVehicles ] = useState([])
 
     useEffect(() => {
+
         getAll().then(setVehicles)
-        reverseGeocode(center.lat, center.lng).then(setInitPos)
+        reverseGeocode(latitud, longitud).then(setInitPos)
+
     }, [])
 
     const[address, setAddress] = useState('')
@@ -45,6 +70,7 @@ function Map() {
     const[distanceValue, setDistanceValue] = useState('')
     const[durationValue, setDurationValue] = useState('')
 
+
     //Funcion para seleccionar una posicion en el mapa 
     
     const handleMapClick = (event) =>{
@@ -59,6 +85,7 @@ function Map() {
 
     const handleChange = (evt) =>{
         setTypeService(evt.target.value)
+        console.log(evt.target.value)
     } 
 
 
@@ -157,11 +184,11 @@ function Map() {
 
                 <form className="form_map_data" style={{display: isOpen ? "block" : "none"}}>
                     <div>
-                        <label>Distancia del viaje: </label>
+                        <label>Distancia estimada: </label>
                         <label style={{color:"white"}}>&nbsp;{distance}</label>
                     </div>
                     <div>
-                        <label>Duración del viaje:  </label>
+                        <label>Tiempo estimado:  </label>
                         <label style={{color:"white"}}> &nbsp;{duration}</label>
                     </div>
                     <div>
@@ -180,9 +207,9 @@ function Map() {
                         <label> Seleccione el tipo de servicio</label>
                     </div>
                     <select className="travel_type" onChange={handleChange} name="travel_tipe" id="type">
-                        <option value="Viaje" selected>Viaje</option>
-                        <option value="Delivery">Delivery</option>
-                        <option value="Otros">Otros</option>
+                        <option value="V" selected>Viaje</option>
+                        <option value="D">Delivery</option>
+                        <option value="O">Otros</option>
                     </select> <br />
                     <div className="btns_forms">
                         <button className="button_two"  type="button" onClick={make_contract} >Enviar </button>

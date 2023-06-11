@@ -21,7 +21,7 @@ function HeaderUser(){
             <ConnectionButton/>
             <ul className="menu-nav">
                 <li className="iten-nav-menu">
-                    <NavLink to="/User-Home/map" className='nav-menu-link'>Mapa</NavLink>
+                    <NavLink to="/User-Home/" className='nav-menu-link'>Mapa</NavLink>
                     <NavLink to="/User-Home/Historial" className='nav-menu-link'>Historial</NavLink>
                 </li>
                 <button className="logout" onClick={handleClick}>Logout</button>
