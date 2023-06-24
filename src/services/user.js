@@ -25,3 +25,9 @@ export const update = (body, id) =>
     fetch (`${api}/api/person/${id}/`, {method: 'PATCH', headers,body: JSON.stringify(body)})
         .then((res) => res.json())
         .then((data) => data);
+
+export const getHistory = (id) =>
+    fetch(`${api}/getAllTransaction/${id}`)
+    .then((res) => res.json())
+    .then((data) => data.transactions)
+

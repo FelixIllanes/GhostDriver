@@ -26,3 +26,29 @@ export const startTravel = (plate, userId, type, initLat, initLng, destLat, dest
         .then((res) => res.json())
         .then((data) => data);
     }
+
+    export const endTravel = (plate, distance) =>{
+
+        const body = {
+            "plate": plate,
+            "distance": distance,
+        }
+        fetch(`${api}endTravel/`, {method: 'POST', headers, body: JSON.stringify(body)})
+        .then((res) => res.json())
+        .then((data) => data)
+    }
+        
+    export const allTransactions = () =>
+        fetch(`${api}/allTransactions/`)
+        .then((res) => res.json())
+        .then((data) => data.transacciones)
+
+    export const searchTransactions = (body) =>
+        fetch(`${api}/searchTransacciones/` , {method: 'POST', headers, body: JSON.stringify(body)})
+        .then((res) => res.json())
+        .then((data) => data.transacciones)
+
+    export const searchInvoice = (body) =>
+        fetch(`${api}/searchInvoice/` , {method: 'POST', headers, body:JSON.stringify(body)})
+        .then((res) => res.json())
+        .then((data) => data.invoices)

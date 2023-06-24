@@ -23,7 +23,13 @@ function Header(){
                     <Link to= "/Admin-home"className='nav-menu-link'>Usuarios</Link>
                 </li>
                 <li className="iten-nav-menu">
+                    <Link to="ServiceHistory" className='nav-menu-link'>Transacciones</Link>
+                </li>
+                <li className="iten-nav-menu">
                     <Link to="Invoice" className='nav-menu-link'>Facturas</Link>
+                </li>
+                <li className="iten-nav-menu">
+                    <Link to="Invoce_pay" className='nav-menu-link'>Pagar Facturas</Link>
                 </li>
                 <li className="iten-nav-menu">
                     <Link to="VhclCrud" className='nav-menu-link'>Vehiculos</Link>

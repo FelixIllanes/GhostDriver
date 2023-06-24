@@ -5,6 +5,7 @@ import { getPrice, startTravel } from "../services/general";
 import { sendEther } from "../services/Contract";
 import { reverseGeocode } from "../services/geocode";
 import { get } from "../services/user";
+import Modal_EndTravel from "../Components/Modal/modal_endtravel";
 
 
 export default function MapPage() {
@@ -20,7 +21,7 @@ export default function MapPage() {
         const espera = async () => {
             const userId = window.localStorage.getItem('userId');
             get(userId).then(setUserPos);
-            await new Promise(resolve => setTimeout(resolve,2000));
+            await new Promise(resolve => setTimeout(resolve,1000));
             setLoaded(false)
         }
         espera()
@@ -131,14 +132,19 @@ function Map({userPos}) {
         await sendEther(String(price.precio_eth))
         const userId = window.localStorage.getItem('userId');
         startTravel(price.plate, userId,typeService, center.lat, center.lng, posicion.lat, posicion.lng, durationValue, distanceValue, price.precio_bs)
+        setOpenModal(true)
     }; 
 
     
     const[isOpen, setIsOpen] = useState(false)
 
+    const[openModal, setOpenModal] = useState(false)
 
-    return(   
-        <div className="map_layout">
+
+    return(
+        <> 
+        {openModal && <Modal_EndTravel closeModal={setOpenModal} plate={price.plate} distance={distanceValue}/>}
+        <div className="map_layout"> 
             <GoogleMap zoom={16} 
                 center={center}
                 onClick={flag && handleMapClick} 
@@ -218,6 +224,6 @@ function Map({userPos}) {
                 </form>
             </div>
         </div> 
-        
+    </>     
     );
 }

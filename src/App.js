@@ -11,6 +11,8 @@ import UserHome from "./Pages/UserHome";
 import { AuthProvider } from './store/user';
 import HistorialPage from "./Pages/HistorialPage";
 import UserIni from "./Components/Inicio/userIni";
+import Invoices from "./Pages/Invoices";
+import ServiceHistory from "./Pages/ServiceHistory";
 
 function App() {
   return (
@@ -22,7 +24,6 @@ function App() {
 
             {/* Rutas para usuario */}
             <Route path='/User-Home' element={<UserHome/>}>
-              {/* <Route index element={<UserIni/>}/> */}
               <Route index element={<MapPage/>}/>
               <Route path="Historial" element={<HistorialPage/>}/>
             </Route>
@@ -32,7 +33,8 @@ function App() {
              <Route index element={<UserCrud/>}/>
               <Route path="VhclCrud" element={<VehicleCrud/>}/>
               <Route path="Invoice" element={<InvoiceList/>}/>
-{/*               <Route path="CreateUser" element={<CreateUser/>}/> */}
+              <Route path="Invoce_pay" element={<Invoices/>}/>
+              <Route path="ServiceHistory" element={<ServiceHistory/>}/>
             </Route>
             
             <Route path="*" element={<h1>Not Found</h1>}/>

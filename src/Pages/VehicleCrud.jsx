@@ -11,6 +11,7 @@ export default function VehicleCrud() {
 
     return(
         <main>
+            <h2 className="titulos">Lista de vehiculos</h2>
             <div className="container_cruduser_table">
                 <table className="crud_table_usr">
                     <thead>
@@ -24,7 +25,6 @@ export default function VehicleCrud() {
                         <th>Año</th>
                         <th>Limpieza</th>
                         <th>Kilometraje</th>
-{/*                         <th></th> */}
                     </thead>
                     {vehicles?.map((vehicle, idx) =>(
 

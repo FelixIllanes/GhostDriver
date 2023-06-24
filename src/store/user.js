@@ -29,8 +29,6 @@ export const AuthProvider = ({children}) => {
         setUser({ ci, name, lastname, email, is_superuser });
         setIsAutenticated(true);
 
-        console.log(user)
-
         window.localStorage.setItem('userId', user.user.ci);
         window.localStorage.setItem('token', user.token);
       };

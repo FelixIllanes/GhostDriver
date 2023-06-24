@@ -18,6 +18,7 @@ export default function UserCrud() {
         {openModal && <Modal_Delete closeModal={setOpenModal} removeUser={removeUser} user={user}/>}
         {openEdit && <Modal_Update closeEdit={seOpenEdit} updateUser={updateUser} user={user}/>}
         <main>
+            <h2 className="titulos" >Lista de usuario</h2>
             <div className="container_cruduser_table">
                 <table className="crud_table_usr">
                     <thead>

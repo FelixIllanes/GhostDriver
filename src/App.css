@@ -155,3 +155,63 @@ table tr:hover{
 .create_user_background{
   height: 100vh;
 }
+
+.search_bar{
+  background-color: white;
+  height: 200px;
+  width: 65rem;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+}
+.search_input_container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.search_bar input{
+  height: 30px;
+}
+.search_bar button{
+  margin: auto;
+  width: 130px;
+  height: 40px;
+}
+
+.search_bar input{
+  width: 20rem;
+}
+
+.container_transactions{
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.search_bar_transaction{
+  background-color: white;
+  height: 500px;
+  width: 30rem;
+  margin-top: 20px;
+  margin-left: 60px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+}
+.search_bar_transaction button{
+  margin-left: 40%;
+  width: 90px;
+}
+.search_bar_transaction select{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 130px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 17px;
+  text-align: center;
+}
+.titulos{
+  text-align: center;
+  color: var(--bluedark);
+}
