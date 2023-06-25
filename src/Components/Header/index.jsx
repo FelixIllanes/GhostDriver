@@ -15,8 +15,7 @@ function Header(){
     return(
       <header className="header">
         <nav className="nav">
-            <img className="logo" src="" alt="" />
-            <p className="titulo"> Ghost Driver</p>
+            <p className="tituloA"> Ghost Driver</p>
             <ConnectionButton/>
             <ul className="menu-nav">
                 <li className="iten-nav-menu">
@@ -33,6 +32,9 @@ function Header(){
                 </li>
                 <li className="iten-nav-menu">
                     <Link to="VhclCrud" className='nav-menu-link'>Vehiculos</Link>
+                </li>
+                <li className="iten-nav-menu">
+                    <Link to="Report" className='nav-menu-link'>Reporte</Link>
                 </li>
                 <button className="logout" onClick={handleClick}>Logout</button>
             </ul>

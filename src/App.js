@@ -13,6 +13,7 @@ import HistorialPage from "./Pages/HistorialPage";
 import UserIni from "./Components/Inicio/userIni";
 import Invoices from "./Pages/Invoices";
 import ServiceHistory from "./Pages/ServiceHistory";
+import Report from "./Pages/Report";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
               <Route path="Invoice" element={<InvoiceList/>}/>
               <Route path="Invoce_pay" element={<Invoices/>}/>
               <Route path="ServiceHistory" element={<ServiceHistory/>}/>
+              <Route path="Report" element={<Report/>}/>
             </Route>
             
             <Route path="*" element={<h1>Not Found</h1>}/>

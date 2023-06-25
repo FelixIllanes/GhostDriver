@@ -1,6 +1,7 @@
 import "./invoice.css"
 import { createPDF, getEnterpriseById, repair } from "../../services/invoice"
 import { useEffect, useState } from "react"
+import { sendEther2 } from "../../services/Contract2"
 
 function Normal_invoice({invoice}) {
 
@@ -13,9 +14,15 @@ function Normal_invoice({invoice}) {
 
     const[body, setBody] = useState({})
 
-    const handleClick = (evt) =>{
+    const make_contract = async () => {
+        let ether_price = price*(0.000076423172155)
+        await sendEther2(String(ether_price))
         repair(id, plate)
         window.location.reload()
+    }
+
+    const handleClick = (evt) =>{
+        make_contract()
     }
 
     return(

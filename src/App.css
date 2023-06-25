@@ -215,3 +215,18 @@ table tr:hover{
   text-align: center;
   color: var(--bluedark);
 }
+
+.report_container{
+  width: 55rem;
+  height: 300px;
+  padding: 40px 40px 40px 40px;
+  background-color: white;
+  margin: auto;
+  margin-top: 5%;
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+}
+.report_container button{
+  margin-left: 45%;
+}
