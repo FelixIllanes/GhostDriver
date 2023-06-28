@@ -2,7 +2,7 @@ import { useState } from "react"
 import "./createuser.css"
 import { createUser } from "../../services/user"
 
-function UserCreate() {
+function UserCreate({closeModal}) {
 
     const[body, setBody] = useState({})
 
@@ -22,6 +22,7 @@ function UserCreate() {
             if (data.status_code !== 201){
                 console.log("Error al crear usuario")
             }}).catch(err => console.log(err))
+        closeModal(true)
     }
 
     return(

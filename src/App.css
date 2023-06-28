@@ -233,3 +233,22 @@ table tr:hover{
   display: grid;
   grid-template-columns: auto auto;
 }
+.goBack{
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 40px;
+  color: var(--bluedark);
+  transition: transform 0.3s ease-in-out;
+}
+.goBack:hover{
+  color: white;
+  transition: all 0.4s ease 0s;
+  transform: scale(1.2);
+}
