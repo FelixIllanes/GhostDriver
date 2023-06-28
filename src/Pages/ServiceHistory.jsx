@@ -92,8 +92,9 @@ export default function ServiceHistory() {
                             autoComplete="off"/>
                         </div>
                     </div>
-                    <div>
+                    <div className="button_search">
                         <button type="submit" className="button_one">Buscar</button>
+                        <button type="button" onClick={()=>window.location.reload()} className="button_one">Mostrar todos</button>
                     </div>
                     </form>
                 </div>

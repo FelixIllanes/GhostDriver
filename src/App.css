@@ -174,8 +174,7 @@ table tr:hover{
   height: 30px;
 }
 .search_bar button{
-  margin: auto;
-  width: 130px;
+  width: 120px;
   height: 40px;
 }
 
@@ -199,8 +198,8 @@ table tr:hover{
   padding: 20px 30px;
 }
 .search_bar_transaction button{
-  margin-left: 40%;
-  width: 90px;
+  width: 120px;
+  margin: auto;
 }
 .search_bar_transaction select{
   margin-bottom: 10px;
@@ -229,4 +228,8 @@ table tr:hover{
 }
 .report_container button{
   margin-left: 45%;
+}
+.button_search{
+  display: grid;
+  grid-template-columns: auto auto;
 }

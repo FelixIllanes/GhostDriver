@@ -1,7 +1,28 @@
+import { useEffect, useState } from "react"
 import { endTravel } from "../../services/general"
 import "./modal.css"
-function Modal_EndTravel({closeModal, plate, distance}){
+import CarLoader from "../CarLoader";
+import { update } from "../../services/user";
+import { vehicleUpdate } from "../../services/vehicle";
+function Modal_EndTravel({closeModal, plate, distance, ci, posicion}){
 
+    const[loaded, setLoaded] = useState(true)
+    
+    const[body,setBody] = useState({
+        longitud: posicion.lng,
+        latitud: posicion.lat
+    })
+
+    useEffect(() => {
+        const espera = async () =>{
+            update(body, ci)
+            vehicleUpdate(body, plate)
+            await new Promise(resolve => setTimeout(resolve,3000));
+            setLoaded(false)
+        }
+        espera()
+    },[]); 
+    
     const handleClick = (evt) =>{
         
         endTravel(plate, distance)
@@ -9,6 +30,13 @@ function Modal_EndTravel({closeModal, plate, distance}){
         window.location.reload()
     }
 
+    if(loaded){
+        return <div className="modal_background">
+                <div className="modal_container2">
+                  <CarLoader/>
+                </div>
+               </div>
+    }
 
     return(
         <div className="modal_background">

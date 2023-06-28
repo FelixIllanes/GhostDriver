@@ -19,7 +19,16 @@
     padding: 25px;
     background-color: white;
 }
-
+.modal_container2{
+    width: 500px;
+    height: 220px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: rgba(200, 200, 200, 0.685);
+}
 .modal_container .modal_body{
     display: inline-block;
     text-align: center;

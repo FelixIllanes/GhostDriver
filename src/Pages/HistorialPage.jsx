@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Historial from "../Components/Historial"
 import { getHistory } from "../services/user"
+import CarLoader from "../Components/CarLoader"
 export default function HistorialPage() {
 
     const[historyData, setHistoryData] = useState([])
@@ -10,7 +11,6 @@ export default function HistorialPage() {
         getHistory(userId).then(setHistoryData)
     },[]) 
 
-    console.log(historyData)
 
     return(
         <main>
@@ -23,8 +23,6 @@ export default function HistorialPage() {
                         <th>Distancia</th>
                         <th>Hora de salida</th>
                         <th>Hora de llegada</th>
-                        <th>Lugar de salida</th>
-                        <th>Lugar de llegada</th>
                     </thead>
 
                 {historyData?.map((oneHistory, idx) => (

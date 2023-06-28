@@ -23,8 +23,6 @@ function Historial({oneHistory}) {
                 <td>{distance} Km</td>
                 <td>{departure_time}</td>
                 <td>{arrival_time}</td>
-                <td></td>
-                <td></td>
             </tr>
         </tbody>
     )

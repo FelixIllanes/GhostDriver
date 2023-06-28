@@ -21,7 +21,7 @@ export default function MapPage() {
         const espera = async () => {
             const userId = window.localStorage.getItem('userId');
             get(userId).then(setUserPos);
-            await new Promise(resolve => setTimeout(resolve,1000));
+            await new Promise(resolve => setTimeout(resolve,1500));
             setLoaded(false)
         }
         espera()
@@ -143,7 +143,7 @@ function Map({userPos}) {
 
     return(
         <> 
-        {openModal && <Modal_EndTravel closeModal={setOpenModal} plate={price.plate} distance={distanceValue}/>}
+        {openModal && <Modal_EndTravel closeModal={setOpenModal} plate={price.plate} distance={distanceValue} ci={ci} posicion={posicion}/>}
         <div className="map_layout"> 
             <GoogleMap zoom={16} 
                 center={center}

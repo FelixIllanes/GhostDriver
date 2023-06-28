@@ -7,3 +7,8 @@ export const getAll = () =>
 
 export const setVehiclePosition = () =>
     fetch(`${api}/updatelocations/`);
+
+export const vehicleUpdate = (body, plate) =>
+    fetch(`${api}/api/vehicle/${plate}/` , {method: 'PATCH', headers, body: JSON.stringify(body)})
+    .then((res) => res.json())
+    .then((data) => data)

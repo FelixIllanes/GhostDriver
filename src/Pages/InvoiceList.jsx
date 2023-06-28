@@ -89,7 +89,10 @@ export default function InvoiceList() {
                         onChange={handleChange}
                         autocomplete="off"/>
                     </div>
-                    <button className="button_one">Buscar</button>
+                    <div className="button_search">
+                        <button className="button_one">Buscar</button>
+                        <button type="button" onClick={()=>window.location.reload()} className="button_one">Mostrar todos</button>
+                    </div>
                 </div>
                 </form>
             </div>

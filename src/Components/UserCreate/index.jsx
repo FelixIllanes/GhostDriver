@@ -34,7 +34,8 @@ function UserCreate() {
                         type="text"
                         onChange={handleChange} 
                         name="ci"
-                        autocomplete="off"/>
+                        required
+                        autoComplete="off"/>
                     </div>
                     <div className="person_data_name">
                         <div className="form_imputs">
@@ -43,7 +44,8 @@ function UserCreate() {
                             type="text"
                             onChange={handleChange}  
                             name="name"
-                            autocomplete="off"/>
+                            required
+                            autoComplete="off"/>
                         </div>
                         <div className="form_imputs">
                             <label className="form_imputs"> Apellido:</label> 
@@ -51,7 +53,8 @@ function UserCreate() {
                             type="text"
                             onChange={handleChange}  
                             name="lastname"
-                            autocomplete="off"/>
+                            required
+                            autoComplete="off"/>
                         </div>
                     </div>
                     <div className="directions_data_form">
@@ -61,7 +64,8 @@ function UserCreate() {
                             type="text"
                             onChange={handleChange}  
                             name="city"
-                            autocomplete="off"/>
+                            required
+                            autoComplete="off"/>
                         </div>
                     </div>
                     <div className="form_imputs email">
@@ -70,7 +74,8 @@ function UserCreate() {
                         type="email"
                         onChange={handleChange}  
                         name="email"
-                        autocomplete="off"/>
+                        required
+                        autoComplete="off"/>
                     </div>
                     <div className="form_imputs password">
                         <label> Password:</label>
@@ -78,7 +83,8 @@ function UserCreate() {
                         type="password"
                         onChange={handleChange}  
                         name="password"
-                        autocomplete="off"/>
+                        required
+                        autoComplete="off"/>
                     </div>
                     <div className="login_btn">
                         <button type="submit" onClick={handleSubmit} className="button_one">Crear Usuario</button>

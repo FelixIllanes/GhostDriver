@@ -32,7 +32,7 @@ function Modal_Update({closeEdit, updateUser, user}){
             }else{
                 updateUser(ci,)
             } */
-            updateUser(ci, body)
+            updateUser(ci, data)
             closeEdit()
         })
     }
