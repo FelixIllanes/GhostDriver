@@ -17,7 +17,7 @@ function Modal_EndTravel({closeModal, plate, distance, ci, posicion}){
         const espera = async () =>{
             update(body, ci)
             vehicleUpdate(body, plate)
-            await new Promise(resolve => setTimeout(resolve,3000));
+            await new Promise(resolve => setTimeout(resolve,5000));
             setLoaded(false)
         }
         espera()
